@@ -1,31 +1,40 @@
 /*-------- ESTILOS GLOBALES -------- */
 
-:root {
-	/*------- Variables Fonts --------*/
-	--fontType: font-family: 'Roboto', sans-serif;
-	--fuente_h1: 3rem;
-	--fuente_h2: 1.1rem;
-	--fuente_h3: 1rem;
-	--fuente_p: 0.9rem;
-	/*------- Variables Colors --------*/
-	--rojo_main: #e61639;
-	--azul_main:  #0084c0;
-	--naranja_main:  #ffa82b;
-	--green_main: #6db230;
-	--black: #000000;
-	--white: #ffffff;
+@font-face {
+    font-family: MADETommy;
+    src: url(fonts/made_tommy_soft/MADE\ Tommy\ Soft\ Regular\ PERSONAL\ USE.otf);
+}
 
+:root {
+    /*------- Variables Fonts --------*/
+    --fontType: MADETommy;
+    --fontMenu: 'Varela Round', sans-serif;
+    --fuente_h1: 3rem;
+    --fuente_h2: 1.1rem;
+    --fuente_h3: 1rem;
+    --fuente_p: 0.9rem;
+    /*------- Variables Colors --------*/
+    --rojo_main: #e61639;
+    --azul_main: #0084c0;
+    --naranja_main: #ffa82b;
+    --green_main: #6db230;
+    --black: #000000;
+    --white: #ffffff;
+    --yellow_button: #fcd23a;
+    --text_color: #01033b;
 }
 
 body {
-	font-family: var(--fontType);
-	color: var(--black);
-	text-align: left;
-	margin: 0;
-	overflow-x: hidden;
+    font-family: var(--fontType);
+    color: var(--black);
+    text-align: left;
+    margin: 0;
+    overflow-x: hidden;
 }
 
+
 /*------- Utils Class --------*/
+
 .estructura_bloques {
     min-width: 100%;
     max-width: 100%;
@@ -43,81 +52,164 @@ body {
     min-width: 90vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
-.bloque_grilla {
-    width: 90vw;
-    justify-content: flex-start;
+.menu {
     display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 7vh;
 }
 
-.centrar_boton {
+.menu__ul {
     display: flex;
-    justify-content: center;
+    width: 65%;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+li {
+    list-style: none;
+}
+
+a {
     text-decoration: none;
+    font-family: var(--fontMenu);
+    font-size: 16px;
+    color: var(--text_color);
+}
+
+.menu__button {
+    background-color: var(--yellow_button);
+    color: var(--white);
+    width: 15%;
+    height: 50px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    border: none;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    font-size: 20px;
+    line-height: 1.75;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 5%;
+    justify-content: space-between;
+}
+
+.information {
+    display: flex;
+    flex-flow: column wrap;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+}
+
+.sumary_main {
+    color: var(--text_color);
+    font-family: var(--fontType);
+    padding-right: 15%;
+    font-size: 1.1em;
+    line-height: 0.96;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.join-us-main {
+    width: 45%;
+    border-radius: 8px;
+    border: none;
+    background-color: #3eb7bd;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+
+.clown_main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 60%;
+    margin-right: -6%;
+    margin-bottom: -6%;
 }
 
 
 /*------- Media Queries --------*/
 
+
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-/* Styles */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    /* Styles */
 }
+
 
 /* Smartphones (landscape) ----------- */
-@media only screen 
-and (min-width : 321px) {
-/* Styles */
+
+@media only screen and (min-width: 321px) {
+    /* Styles */
 }
+
 
 /* Smartphones (portrait) ----------- */
-@media only screen 
-and (max-width : 320px) {
-/* Styles */
+
+@media only screen and (max-width: 320px) {
+    /* Styles */
 }
+
 
 /* iPads (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) {
-/* Styles */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    /* Styles */
 }
+
 
 /* iPads (landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) {
-/* Styles */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    /* Styles */
 }
+
 
 /* iPads (portrait) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
-/* Styles */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    /* Styles */
 }
+
 
 /* Desktops and laptops ----------- */
-@media only screen 
-and (min-width : 1224px) {
-/* Styles */
+
+@media only screen and (min-width: 1224px) {
+    /* Styles */
 }
+
 
 /* Large screens ----------- */
-@media only screen 
-and (min-width : 1824px) {
-/* Styles */
+
+@media only screen and (min-width: 1824px) {
+    /* Styles */
 }
 
+
 /* iPhone 4 ----------- */
-@media
-only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {}
+
+-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {}
+
+only screen and (min-device-pixel-ratio: 1.5) {}
