@@ -48,47 +48,54 @@ body {
 .estructura_bloque_interno {
     min-width: 90%;
     max-width: 90%;
-    min-height: 90vh;
+    min-height: 88vh;
     min-width: 90vw;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .menu {
     display: flex;
     flex-flow: row wrap;
     width: 100%;
-    height: 7vh;
+    height: 8%;
+    background-color: var(--white);
+    position: fixed;
+    z-index: 1;
+    padding-left: 5%;
+    padding-top: 4vh;
 }
 
 .menu__ul {
     display: flex;
     width: 65%;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-li {
+.menu__ul li {
     list-style: none;
 }
 
-a {
+.menu__ul a {
     text-decoration: none;
     font-family: var(--fontMenu);
-    font-size: 16px;
+    font-size: 1rem;
+    margin-right: 5px;
     color: var(--text_color);
 }
 
 .menu__button {
     background-color: var(--yellow_button);
     color: var(--white);
-    width: 15%;
-    height: 50px;
+    width: 12%;
+    height: 2.8rem;
     border-radius: 8px;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
     border: none;
     text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-    font-size: 20px;
+    font-size: 1.3rem;
     line-height: 1.75;
     text-align: center;
 }
@@ -113,10 +120,10 @@ main {
     color: var(--text_color);
     font-family: var(--fontType);
     padding-right: 15%;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     line-height: 0.96;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 5%;
+    margin-bottom: 5%
 }
 
 .join-us-main {
@@ -125,12 +132,8 @@ main {
     border: none;
     background-color: #3eb7bd;
     text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-    font-size: 20px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
+    font-size: 1.4rem;
     line-height: 1.75;
-    letter-spacing: normal;
     text-align: center;
     color: #ffffff;
 }
@@ -141,7 +144,7 @@ main {
     flex-wrap: nowrap;
     width: 60%;
     margin-right: -6%;
-    margin-bottom: -6%;
+    margin-bottom: -4%;
 }
 
 
