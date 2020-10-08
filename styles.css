@@ -55,6 +55,12 @@ body {
     justify-content: center;
 }
 
+.centrar_boton {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
 .menu {
     display: flex;
     flex-flow: row wrap;
@@ -147,6 +153,26 @@ main {
     margin-bottom: -4%;
 }
 
+.testimonio{
+    display: flex;
+    width: 50%;
+    height: 50vh;
+    align-self: center;
+    margin-top: 7%;
+    justify-content: space-around;  
+}
+.persona1{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    width: 250px;
+}
+.persona2{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    width: 250px;
+}
 
 /*------- Media Queries --------*/
 
